@@ -7,7 +7,7 @@ import plotly.express as px
 # Load the health dataset
 @st.cache_data
 def load_health_data():
-    data = pd.read_csv(r'C:\Users\ak52\Desktop\Health.csv')
+    data = pd.read_csv(r'https://raw.githubusercontent.com/Akram-Kanaan/Visuals/main/Health.csv')
     data.columns = data.columns.str.strip()  # Clean column names
     data['Nb of Covid-19 cases'] = pd.to_numeric(data['Nb of Covid-19 cases'], errors='coerce')
     data['Percentage of cases out of national total'] = pd.to_numeric(data['Percentage of cases out of national total'], errors='coerce')
